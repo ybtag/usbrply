@@ -59,7 +59,7 @@ Install
 * pip install usbrply
 
 Test
-* If not still in venv (prompt like "(usbrply)" ): usbrply/Scripts/activate.bat
+* If not still in venv (prompt like "(usbrply)" ): usbrply\Scripts\activate.bat
 * python usbrply\Scripts\usbrply -h
   * You should get a help message
 * Download and place in your home dir: https://github.com/JohnDMcMaster/usbrply-test/raw/master/win1.pcapng
