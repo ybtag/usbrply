@@ -63,7 +63,7 @@ Test
 * python usbrply\Scripts\usbrply -h
   * You should get a help message
 * Download and place in your home dir: https://github.com/JohnDMcMaster/usbrply-test/blob/ca53b765ce3f97c284924a3737fd836f5cfbb7ff/win_misc.pcapng
-* python usrply\Scripts\usbrply win1.pcapng
+* python usrply\Scripts\usbrply win_misc.pcapng
   * You should see python code that will reproduce the .pcap file commands
 
 # Sample workflows
