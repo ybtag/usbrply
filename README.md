@@ -62,8 +62,8 @@ Test
 * If not still in venv (prompt like "(usbrply)" ): usbrply\Scripts\activate.bat
 * python usbrply\Scripts\usbrply -h
   * You should get a help message
-* Download and place in your home dir: https://github.com/JohnDMcMaster/usbrply-test/raw/master/win1.pcapng
-* python usrply\Scripts\usbrply win1.pcapng
+* Download and place in your home dir: https://github.com/JohnDMcMaster/usbrply-test/blob/ca53b765ce3f97c284924a3737fd836f5cfbb7ff/win_misc.pcapng
+* python usrply\Scripts\usbrply win_misc.pcapng
   * You should see python code that will reproduce the .pcap file commands
 
 # Sample workflows
@@ -79,12 +79,7 @@ Sample workflow for capturing Windows traffic and replaying traffic in Python:
 * Stop capture
 * Save capture. Save in pcap-ng format (either should work)
 * Close Wireshark
-* Run: "usbrply --wrapper --device-hi -p my.pcapng >replay.py"
-* Assuming your usb device is connected to the computer, go to "Device manager", find your device, right click on it, select "Properties", go to "Details" tab, select "Hardware IDs" from the drop-down, and you will find an entry of a form: HID\VID_046D&PID_C05A For this example the vid is 0x046D and the pid is 0xC05A
-* Scroll down to the bottom of replay.py and edit the following line:
-*         if (vid, pid) == (**0x0000**, **0x0000**):
-* Example edited line:
-*         if (vid, pid) == (**0x046D**, **0xC05A**):    
+* Run: "usbrply --wrapper --device-hi -p my.pcapng >replay.py" 
 * Linux: run "python replay.py"
 * Verify expected device behavior. Did an LED blink? Did you get expected data back?
 
